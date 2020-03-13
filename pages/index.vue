@@ -15,9 +15,9 @@
       <h4 class="">Con la colaboración de:</h4>
       <ul>
         <li>ATTG - Rock band (desde Madrid)</li>
-        <li>The Holy Crabs (desde Murcia</li>
+        <li>The Holy Crabs (desde Murcia)</li>
         <li>Grupo local (en construcción)</li>
-        <li>Y otros artistas por confirmar</li>
+        <li>...Y otros artistas por confirmar</li>
       </ul>
     </div>
     <div class="trama">
@@ -38,9 +38,17 @@
         <div class="desc">Los conciertos</div>
       </div>
     </div>
+    <div class="pre-footer">
+      <div class="logo">
+        <img src="/img/logo-attg.jpg" alt="" />
+      </div>
+      <div class="logo">
+        <img src="/img/holy-crabs.jpg" alt="" />
+      </div>
+    </div>
     <div class="footer">
       Si estás interesado en esta película contacta con nostros en
-      www.carcaboso.com <br />
+      <a href="http://www.carcaboso.com">www.carcaboso.com</a> <br />
       - Seguiremos informando -
     </div>
   </div>
@@ -77,7 +85,8 @@ export default {
   align-items: center;
 }
 .top-banner span {
-  font-weight: 700;
+  padding: 0 4px;
+  color: #f2f2f2;
 }
 
 .header-image {
@@ -88,29 +97,79 @@ export default {
   background-position-x: center;
   background-position-y: 35%;
 }
-
+.header-image::after {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.24) 0, transparent 50%);
+  height: 69.6%;
+  min-height: 69.6%;
+  content: '';
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
 .title {
+  font-family: 'Lobster', cursive;
+
   font-size: 5rem;
-  padding: 24px;
-  padding-bottom: 0;
+  padding: 32px;
+  margin: 0;
 }
 .subtitle {
-  font-size: 2rem;
-  padding: 12px;
+  font-size: 1.6rem;
+  padding: 24px;
   background: #eab018;
+  color: #3f0200;
+  margin: 0;
 }
 .date {
-  font-size: 1rem;
-  padding: 0;
+  font-size: 1.6rem;
+  padding: 24px;
 }
 .yellow {
   color: #ffde22;
 }
 .colaboran {
   padding: 24px;
+  margin: 0;
+  width: 100%;
+  background: #3e3e40;
+  color: #fff;
+}
+.colaboran h4 {
+  margin: 0;
+  padding: 24px;
+}
+
+.colaboran ul {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 24px;
 }
 .colaboran ul li {
-  padding: 8px;
+  padding: 6px;
   list-style: none;
+  margin: 0;
+}
+.parte {
+  padding: 24px;
+}
+.numero-parte {
+  color: #eab018;
+}
+.pre-footer {
+  display: flex;
+  background: #fff;
+  padding: 24px;
+  justify-content: space-around;
+}
+.pre-footer > div {
+  flex-grow: 1;
+  max-width: 200px;
+}
+.pre-footer img {
+  width: 100%;
+}
+.footer {
+  background: #3e3e40;
+  padding: 24px;
 }
 </style>
