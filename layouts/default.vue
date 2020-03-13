@@ -10,8 +10,7 @@ html,
 body {
   height: 100%;
   font-family: 'Ubuntu', sans-serif;
-  background: url('/img/fondo-the-end-chaplin.jpg');
-  background-size: cover;
+  background: #c8591a;
 }
 #__nuxt {
   height: 100%;
@@ -24,5 +23,6 @@ body {
 }
 
 .fullscreen {
+  height: 100vh;
 }
 </style>

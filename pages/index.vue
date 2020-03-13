@@ -1,10 +1,13 @@
 <template>
   <div class="page-wrapper">
-    <div class="top-banner">
-      De los creadores de <span>Asómate</span> y el colectivo
-      <span>Limpia tu río</span>
+    <div class="header">
+      <div class="top-banner">
+        De los creadores de <span>Asómate</span> y
+        <span> Limpia tu río</span>
+      </div>
+      <div class="header-image"></div>
     </div>
-    <div class="presentan">Llega</div>
+
     <h1 class="title">The End</h1>
     <h2 class="subtitle ">Evento gastro-musical en Carcaboso</h2>
     <div class="date yellow">2 de Mayo 2020</div>
@@ -55,17 +58,37 @@ export default {
 <style>
 .page-wrapper {
   text-align: center;
+  height: 100vh;
 }
-
+.header {
+  height: 75%;
+  min-height: 75%;
+}
 .top-banner {
   text-align: center;
   font-family: 'Courgette', cursive;
   font-size: 0.9rem;
+  height: 40px;
+  color: #eab018;
+  background: #eab018;
+  color: #3f0200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.presentan {
-  font-size: 1.5rem;
-  padding: 24px;
+.top-banner span {
+  font-weight: 700;
 }
+
+.header-image {
+  height: calc(100% - 40px);
+  min-height: calc(100% - 40px);
+  background: url('/img/fondo-the-end-chaplin.jpg');
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: 35%;
+}
+
 .title {
   font-size: 5rem;
   padding: 24px;
@@ -74,13 +97,11 @@ export default {
 .subtitle {
   font-size: 2rem;
   padding: 12px;
+  background: #eab018;
 }
 .date {
   font-size: 1rem;
   padding: 0;
-}
-.top-banner span {
-  font-weight: 700;
 }
 .yellow {
   color: #ffde22;
